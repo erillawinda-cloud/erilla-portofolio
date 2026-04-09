@@ -28,31 +28,6 @@ font-family:'Inter',sans-serif;
 
 
 /* =========================
-NAVBAR
-========================= */
-
-.navbar{
-position:fixed;
-top:0;
-right:0;
-width:100%;
-display:flex;
-justify-content:flex-end;
-padding:20px 40px;
-background:rgba(15,23,42,0.7);
-backdrop-filter:blur(6px);
-z-index:999;
-}
-
-.navbar a{
-color:white;
-margin-left:30px;
-font-weight:500;
-font-size:14px;
-}
-
-
-/* =========================
 HERO
 ========================= */
 
@@ -60,36 +35,50 @@ HERO
 min-height:100vh;
 background:linear-gradient(135deg,#1e3a8a,#0f172a);
 color:white;
+
 display:flex;
 flex-direction:column;
 align-items:center;
+justify-content:center;
+
 text-align:center;
 
-padding-top:120px;
-padding-bottom:80px;
-padding-left:20px;
-padding-right:20px;
+padding:40px 20px;
 }
+
+
+/* PROFILE IMAGE */
 
 .profile{
 width:170px;
 height:170px;
 border-radius:50%;
 object-fit:cover;
+
 border:6px solid rgba(255,255,255,0.85);
+
 margin-bottom:30px;
 }
+
+
+/* NAME */
 
 .hero h1{
 font-size:48px;
 margin-bottom:15px;
 }
 
+
+/* TITLE */
+
 .hero-subtitle{
 font-size:22px;
 opacity:0.9;
 margin-bottom:25px;
 }
+
+
+/* DESCRIPTION */
 
 .hero-desc{
 max-width:520px;
@@ -141,6 +130,20 @@ background:rgba(255,255,255,0.1);
 
 
 /* =========================
+FOOTER
+========================= */
+
+footer{
+position:absolute;
+bottom:20px;
+width:100%;
+text-align:center;
+color:rgba(255,255,255,0.7);
+font-size:14px;
+}
+
+
+/* =========================
 RESPONSIVE
 ========================= */
 
@@ -161,16 +164,6 @@ font-size:18px;
 </head>
 
 <body>
-
-
-<div class="navbar">
-
-<a href="#">Skills</a>
-<a href="#">Portfolio</a>
-<a href="#">Contact</a>
-
-</div>
-
 
 
 <section class="hero">
@@ -203,6 +196,11 @@ Contact Me
 </div>
 
 </section>
+
+
+<footer>
+© 2026 Erilla Windayani
+</footer>
 
 
 </body>
