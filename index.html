@@ -22,8 +22,13 @@ margin:0;
 padding:0;
 }
 
+html{
+scroll-behavior:smooth;
+}
+
 body{
 font-family:'Inter',sans-serif;
+background:#f8fafc;
 }
 
 
@@ -130,16 +135,40 @@ background:rgba(255,255,255,0.1);
 
 
 /* =========================
-FOOTER
+CONTACT SECTION
 ========================= */
 
-footer{
-position:absolute;
-bottom:20px;
-width:100%;
+.contact{
+padding:100px 20px;
+background:white;
 text-align:center;
-color:rgba(255,255,255,0.7);
-font-size:14px;
+}
+
+.contact h2{
+font-size:32px;
+margin-bottom:30px;
+color:#0f172a;
+}
+
+.contact-links{
+display:flex;
+justify-content:center;
+gap:25px;
+flex-wrap:wrap;
+}
+
+.contact-links a{
+background:#e2e8f0;
+padding:12px 24px;
+border-radius:8px;
+text-decoration:none;
+color:#0f172a;
+font-weight:500;
+transition:0.2s;
+}
+
+.contact-links a:hover{
+background:#cbd5f5;
 }
 
 
@@ -173,7 +202,6 @@ class="profile"
 src="https://lh3.googleusercontent.com/d/1osk4j4-Zyn9c6d43an9w3l7frewGhj4N"
 />
 
-  
 <h1>Erilla Windayani</h1>
 
 <p class="hero-subtitle">
@@ -190,8 +218,32 @@ I build automation tools using Google Apps Script and Google Sheets to streamlin
 View Portfolio
 </a>
 
-<a href="#" class="btn btn-outline">
+<a href="#contact" class="btn btn-outline">
 Contact Me
+</a>
+
+</div>
+
+</section>
+
+
+
+<section id="contact" class="contact">
+
+<h2>Contact</h2>
+
+<div class="contact-links">
+
+<a href="mailto:erillawinda@gmail.com">
+Email
+</a>
+
+<a href="https://www.linkedin.com/in/erilla-windayani-36672a1b6/" target="_blank">
+LinkedIn
+</a>
+
+<a href="https://github.com" target="_blank">
+GitHub
 </a>
 
 </div>
