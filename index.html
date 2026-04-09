@@ -279,9 +279,9 @@ Automation dashboard built with Google Apps Script to manage client workflow and
 <li>Workflow Automation</li>
 </ul>
 
-<a href="#demo1" class="project-btn">
+<button class="project-btn" onclick="toggleProject()">
 View Project
-</a>
+</button>
 
 </div>
 
@@ -293,7 +293,7 @@ View Project
 
 <!-- PROJECT DEMO -->
 
-<section id="demo1" class="project-demo">
+<section id="demo1" class="project-demo" style="display:none;">
 
 <h2>Client Workflow Automation Dashboard</h2>
 
@@ -331,9 +331,24 @@ The system automatically processes form responses, groups client data, synchroni
 <a href="https://github.com/erillawinda-cloud" target="_blank">GitHub</a>
 </p>
 
-</section>
+</section>   <!-- contact selesai -->
 
+<script>
 
+function toggleProject() {
+
+const demo = document.getElementById("demo1");
+
+if (demo.style.display === "none") {
+    demo.style.display = "block";
+    demo.scrollIntoView({ behavior: "smooth" });
+} else {
+    demo.style.display = "none";
+}
+
+}
+
+</script>
 
 </body>
 </html>
