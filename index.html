@@ -33,7 +33,6 @@ color:#0f172a;
 }
 
 
-
 /* =========================
 HERO
 ========================= */
@@ -81,7 +80,6 @@ margin-bottom:40px;
 }
 
 
-
 /* =========================
 BUTTONS
 ========================= */
@@ -113,7 +111,6 @@ color:white;
 }
 
 
-
 /* =========================
 PORTFOLIO
 ========================= */
@@ -135,17 +132,11 @@ justify-content:center;
 }
 
 .project-card{
-
 max-width:420px;
-
 background:#f8fafc;
-
 border:1px solid #e2e8f0;
-
 padding:30px;
-
 border-radius:12px;
-
 text-align:left;
 }
 
@@ -165,20 +156,13 @@ color:#475569;
 }
 
 .project-btn{
-
 background:#6366f1;
-
 color:white;
-
 padding:10px 20px;
-
 border-radius:8px;
-
 border:none;
-
 cursor:pointer;
 }
-
 
 
 /* =========================
@@ -202,7 +186,6 @@ font-size:24px;
 }
 
 
-
 /* DASHBOARD IMAGE */
 
 .demo-image{
@@ -212,7 +195,6 @@ border-radius:16px;
 box-shadow:0 15px 40px rgba(0,0,0,0.12);
 margin:40px auto;
 }
-
 
 
 /* =========================
@@ -236,7 +218,6 @@ flex:1;
 height:1px;
 background:#cbd5e1;
 }
-
 
 
 /* =========================
@@ -282,29 +263,38 @@ color:#16a34a;
 }
 
 
-
 /* =========================
 WORKFLOW
 ========================= */
 
 .workflow{
 display:flex;
+align-items:center;
 justify-content:center;
-gap:25px;
+gap:20px;
 flex-wrap:wrap;
 margin-bottom:70px;
 }
 
-.workflow-box{
+.workflow-step{
 background:white;
 padding:25px;
 border-radius:14px;
 border:1px solid #e2e8f0;
-width:220px;
+width:200px;
 box-shadow:0 8px 22px rgba(0,0,0,0.08);
-font-weight:500;
+text-align:center;
 }
 
+.workflow-step img{
+width:50px;
+margin-bottom:10px;
+}
+
+.workflow-arrow{
+font-size:28px;
+color:#94a3b8;
+}
 
 
 /* =========================
@@ -323,7 +313,6 @@ box-shadow:0 10px 25px rgba(0,0,0,0.1);
 font-size:16px;
 line-height:1.8;
 }
-
 
 
 /* =========================
@@ -345,13 +334,13 @@ border:1px solid #e2e8f0;
 width:170px;
 box-shadow:0 8px 20px rgba(0,0,0,0.08);
 font-weight:600;
-transition:0.2s;
+text-align:center;
 }
 
-.tech-box:hover{
-transform:translateY(-4px);
+.tech-box img{
+width:40px;
+margin-bottom:10px;
 }
-
 
 
 /* =========================
@@ -359,31 +348,20 @@ CONTACT SECTION
 ========================= */
 
 .contact-section{
-
 background:#f1f5f9;
-
 padding:100px 20px;
-
 text-align:center;
-
 border-top:1px solid #e2e8f0;
-
 }
 
 .contact-section h2{
-
 font-size:32px;
-
 margin-bottom:20px;
-
 }
 
 .contact-section p{
-
 font-size:16px;
-
 color:#334155;
-
 }
 
 </style>
@@ -391,7 +369,6 @@ color:#334155;
 </head>
 
 <body>
-
 
 
 <!-- HERO -->
@@ -476,13 +453,12 @@ Google Sheets Client Automation Dashboard
 <img
 class="demo-image"
 src="https://lh3.googleusercontent.com/d/1uBUH1fq9QixviqudePO_DCX9-4EqHQVa"
-alt="MauCariKost Automation Dashboard"
 />
 
 
 
 <div class="metrics">
-  
+
 <div class="metric-card">
 <b>6</b>
 Automation Scripts
@@ -513,20 +489,30 @@ How It Works
 
 <div class="workflow">
 
-<div class="workflow-box">
-Client submits form
+<div class="workflow-step">
+<img src="https://cdn-icons-png.flaticon.com/512/2921/2921222.png">
+<p>Client submits form</p>
 </div>
 
-<div class="workflow-box">
-Data stored in Google Sheets
+<div class="workflow-arrow">→</div>
+
+<div class="workflow-step">
+<img src="https://cdn-icons-png.flaticon.com/512/281/281760.png">
+<p>Data stored in Google Sheets</p>
 </div>
 
-<div class="workflow-box">
-Admin runs automation
+<div class="workflow-arrow">→</div>
+
+<div class="workflow-step">
+<img src="https://cdn-icons-png.flaticon.com/512/2092/2092663.png">
+<p>Admin runs automation</p>
 </div>
 
-<div class="workflow-box">
-Clients grouped & tracked
+<div class="workflow-arrow">→</div>
+
+<div class="workflow-step">
+<img src="https://cdn-icons-png.flaticon.com/512/1077/1077012.png">
+<p>Clients grouped & tracked</p>
 </div>
 
 </div>
@@ -554,13 +540,25 @@ Tech Stack
 
 <div class="tech-stack">
 
-<div class="tech-box">Google Sheets</div>
+<div class="tech-box">
+<img src="https://cdn-icons-png.flaticon.com/512/281/281760.png">
+Google Sheets
+</div>
 
-<div class="tech-box">Apps Script</div>
+<div class="tech-box">
+<img src="https://cdn-icons-png.flaticon.com/512/5968/5968350.png">
+Apps Script
+</div>
 
-<div class="tech-box">Google Forms</div>
+<div class="tech-box">
+<img src="https://cdn-icons-png.flaticon.com/512/2991/2991148.png">
+Google Forms
+</div>
 
-<div class="tech-box">Workflow Automation</div>
+<div class="tech-box">
+<img src="https://cdn-icons-png.flaticon.com/512/1828/1828919.png">
+Workflow Automation
+</div>
 
 </div>
 
