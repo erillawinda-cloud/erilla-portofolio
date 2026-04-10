@@ -129,6 +129,8 @@ margin-bottom:40px;
 .projects{
 display:flex;
 justify-content:center;
+gap:40px;
+flex-wrap:wrap;
 }
 
 .project-card{
@@ -414,6 +416,9 @@ Contact Me
 
 <div class="projects">
 
+
+<!-- PROJECT 1 -->
+
 <div class="project-card">
 
 <h3>Client Workflow Automation Dashboard</h3>
@@ -434,13 +439,37 @@ View Project
 
 </div>
 
+
+<!-- PROJECT 2 -->
+
+<div class="project-card">
+
+<h3>Survey Proposal Generator</h3>
+
+<p>
+Automation system that converts survey data into automatically generated proposal documents using Google Apps Script and Slides templates.
+</p>
+
+<ul>
+<li>Google Apps Script</li>
+<li>Google Slides</li>
+<li>Document Automation</li>
+</ul>
+
+<button class="project-btn" onclick="toggleProposal()">
+View Project
+</button>
+
+</div>
+
+
 </div>
 
 </section>
 
 
 
-<!-- PROJECT DEMO -->
+<!-- PROJECT DEMO 1 -->
 
 <section id="demo1" class="project-demo" style="display:none;">
 
@@ -454,7 +483,6 @@ Google Sheets Client Automation Dashboard
 class="demo-image"
 src="https://lh3.googleusercontent.com/d/1uBUH1fq9QixviqudePO_DCX9-4EqHQVa"
 />
-
 
 
 <div class="metrics">
@@ -566,6 +594,55 @@ Workflow Automation
 
 
 
+<!-- PROJECT DEMO 2 -->
+
+<section id="demo2" class="project-demo" style="display:none;">
+
+<h2>Survey Proposal Generator</h2>
+
+<img
+class="demo-image"
+src="https://lh3.googleusercontent.com/d/1l2yvZCQU0CPMF4M_2Z6u4qjROyUQfOso"
+/>
+
+<div class="section-divider">
+How It Works
+</div>
+
+<div class="workflow">
+
+<div class="workflow-step">
+<img src="https://cdn-icons-png.flaticon.com/512/2921/2921222.png">
+<p>Survey Data</p>
+</div>
+
+<div class="workflow-arrow">→</div>
+
+<div class="workflow-step">
+<img src="https://cdn-icons-png.flaticon.com/512/281/281760.png">
+<p>Google Sheets</p>
+</div>
+
+<div class="workflow-arrow">→</div>
+
+<div class="workflow-step">
+<img src="https://cdn-icons-png.flaticon.com/512/2092/2092663.png">
+<p>Apps Script Generator</p>
+</div>
+
+<div class="workflow-arrow">→</div>
+
+<div class="workflow-step">
+<img src="https://cdn-icons-png.flaticon.com/512/337/337946.png">
+<p>Proposal Document</p>
+</div>
+
+</div>
+
+</section>
+
+
+
 <!-- CONTACT -->
 
 <section id="contact" class="contact-section">
@@ -588,6 +665,21 @@ Workflow Automation
 function toggleProject() {
 
 const demo = document.getElementById("demo1");
+
+if (demo.style.display === "none") {
+demo.style.display = "block";
+demo.scrollIntoView({ behavior: "smooth" });
+} 
+else {
+demo.style.display = "none";
+}
+
+}
+
+
+function toggleProposal() {
+
+const demo = document.getElementById("demo2");
 
 if (demo.style.display === "none") {
 demo.style.display = "block";
