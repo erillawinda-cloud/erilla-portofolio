@@ -34,6 +34,31 @@ color:#0f172a;
 
 
 /* =========================
+NAVBAR
+========================= */
+
+.navbar{
+position:fixed;
+top:0;
+width:100%;
+background:white;
+border-bottom:1px solid #e2e8f0;
+padding:16px 40px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+z-index:999;
+}
+
+.nav-links a{
+margin-left:20px;
+text-decoration:none;
+color:#334155;
+font-weight:500;
+}
+
+
+/* =========================
 HERO
 ========================= */
 
@@ -48,65 +73,56 @@ align-items:center;
 justify-content:center;
 
 text-align:center;
-padding:40px 20px;
+padding:120px 20px 60px;
 }
 
 .profile{
 width:170px;
 height:170px;
 border-radius:50%;
-object-fit:cover;
-border:6px solid rgba(255,255,255,0.85);
+border:6px solid rgba(255,255,255,0.8);
 margin-bottom:30px;
 }
 
 .hero h1{
-font-size:48px;
-margin-bottom:15px;
+font-size:46px;
+margin-bottom:10px;
 }
 
 .hero-subtitle{
 font-size:22px;
-opacity:0.9;
-margin-bottom:25px;
+opacity:.9;
+margin-bottom:20px;
 }
 
 .hero-desc{
 max-width:520px;
-opacity:0.85;
-font-size:18px;
-line-height:1.7;
+line-height:1.6;
 margin-bottom:40px;
 }
 
 
 /* =========================
-BUTTONS
+BUTTON
 ========================= */
 
-.hero-buttons{
-display:flex;
-gap:20px;
-flex-wrap:wrap;
-justify-content:center;
-}
-
 .btn{
-padding:14px 32px;
-border-radius:10px;
-font-size:16px;
-font-weight:500;
-cursor:pointer;
+padding:14px 30px;
+border-radius:8px;
 text-decoration:none;
+font-weight:500;
+margin:5px;
+cursor:pointer;
 }
 
 .btn-primary{
 background:#3b82f6;
 color:white;
+border:none;
 }
 
 .btn-outline{
-border:1.5px solid rgba(255,255,255,0.6);
+border:1px solid white;
 color:white;
 }
 
@@ -122,54 +138,70 @@ background:white;
 }
 
 .portfolio h2{
-font-size:32px;
+font-size:34px;
 margin-bottom:40px;
 }
 
 .projects{
+max-width:900px;
+margin:auto;
+}
+
+
+/* =========================
+PROJECT NAV
+========================= */
+
+.project-nav{
 display:flex;
 justify-content:center;
-gap:40px;
-flex-wrap:wrap;
+gap:30px;
+margin-bottom:30px;
 }
+
+.project-nav button{
+width:45px;
+height:45px;
+border:none;
+border-radius:50%;
+background:#3b82f6;
+color:white;
+font-size:22px;
+cursor:pointer;
+}
+
+
+/* =========================
+PROJECT CARD
+========================= */
 
 .project-card{
-max-width:420px;
+display:none;
 background:#f8fafc;
 border:1px solid #e2e8f0;
-padding:30px;
+padding:40px;
 border-radius:12px;
 text-align:left;
-transition:0.25s;
 }
 
-.project-card:hover{
-transform:translateY(-6px);
-box-shadow:0 20px 40px rgba(0,0,0,0.12);
+.project-card.active{
+display:block;
 }
 
 .project-card h3{
-margin-bottom:10px;
+margin-bottom:15px;
+font-size:24px;
 }
 
 .project-card p{
-margin-bottom:15px;
+margin-bottom:20px;
 color:#475569;
 }
 
 .project-card ul{
-margin-bottom:20px;
-padding-left:18px;
+margin-bottom:25px;
+padding-left:20px;
 color:#475569;
-}
-
-.project-btn{
-background:#6366f1;
-color:white;
-padding:10px 20px;
-border-radius:8px;
-border:none;
-cursor:pointer;
 }
 
 
@@ -178,9 +210,14 @@ PROJECT DEMO
 ========================= */
 
 .project-demo{
+display:none;
 padding:100px 20px;
 background:#eef2f7;
 text-align:center;
+}
+
+.project-demo.active{
+display:block;
 }
 
 .project-demo h2{
@@ -188,23 +225,64 @@ font-size:36px;
 margin-bottom:10px;
 }
 
-
-/* =========================
-IMAGE DEMO
-========================= */
-
 .demo-image{
-max-width:1100px;
+max-width:1000px;
 width:100%;
-border-radius:16px;
-box-shadow:0 15px 40px rgba(0,0,0,0.12);
+border-radius:14px;
+box-shadow:0 15px 40px rgba(0,0,0,.12);
 margin:40px auto;
-cursor:pointer;
-transition:0.25s;
 }
 
-.demo-image:hover{
-transform:scale(1.03);
+
+/* =========================
+METRICS
+========================= */
+
+.metrics{
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+margin-bottom:70px;
+}
+
+.metric-card{
+background:white;
+padding:25px;
+border-radius:12px;
+width:170px;
+box-shadow:0 8px 20px rgba(0,0,0,.08);
+}
+
+.metric-card b{
+font-size:26px;
+display:block;
+}
+
+
+/* =========================
+WORKFLOW
+========================= */
+
+.workflow{
+display:flex;
+justify-content:center;
+align-items:center;
+gap:20px;
+flex-wrap:wrap;
+margin-bottom:70px;
+}
+
+.workflow-step{
+background:white;
+padding:25px;
+border-radius:12px;
+width:200px;
+box-shadow:0 8px 20px rgba(0,0,0,.08);
+}
+
+.workflow-arrow{
+font-size:26px;
 }
 
 
@@ -232,85 +310,73 @@ background:#cbd5e1;
 
 
 /* =========================
-METRICS
+FEATURE CARD
 ========================= */
 
-.metrics{
-display:flex;
-justify-content:center;
-gap:25px;
-flex-wrap:wrap;
-margin-bottom:70px;
-}
-
-.metric-card{
+.feature-card{
 background:white;
-padding:25px;
+padding:30px;
 border-radius:14px;
-border:1px solid #e2e8f0;
-width:180px;
-box-shadow:0 8px 20px rgba(0,0,0,0.08);
-font-weight:600;
-transition:0.25s;
-}
-
-.metric-card:hover{
-transform:translateY(-5px);
-}
-
-.metric-card b{
-font-size:28px;
-display:block;
-margin-bottom:5px;
-}
-
-.metric-card:nth-child(1){
-background:#1e3a8a;
-color:white;
-}
-
-.metric-card:nth-child(4) b{
-color:#16a34a;
+max-width:420px;
+margin:auto;
+box-shadow:0 8px 20px rgba(0,0,0,.08);
+line-height:1.8;
 }
 
 
 /* =========================
-WORKFLOW
+TECH STACK
 ========================= */
 
-.workflow{
+.tech-stack{
 display:flex;
-align-items:center;
 justify-content:center;
 gap:20px;
 flex-wrap:wrap;
-margin-bottom:70px;
 }
 
-.workflow-step{
+.tech-box{
 background:white;
 padding:25px;
-border-radius:14px;
-border:1px solid #e2e8f0;
-width:200px;
-box-shadow:0 8px 22px rgba(0,0,0,0.08);
-text-align:center;
-cursor:pointer;
-transition:0.25s;
+border-radius:12px;
+width:160px;
+box-shadow:0 8px 20px rgba(0,0,0,.08);
 }
 
-.workflow-step:hover{
-transform:scale(1.05);
+
+/* =========================
+INTERACTIVE DEMO
+========================= */
+
+.generator{
+background:white;
+max-width:500px;
+margin:40px auto;
+padding:30px;
+border-radius:12px;
+box-shadow:0 8px 20px rgba(0,0,0,.08);
 }
 
-.workflow-step img{
-width:50px;
+.generator input{
+width:100%;
+padding:12px;
 margin-bottom:10px;
+border:1px solid #cbd5e1;
+border-radius:6px;
 }
 
-.workflow-arrow{
-font-size:28px;
-color:#94a3b8;
+.generator button{
+background:#3b82f6;
+color:white;
+border:none;
+padding:12px;
+border-radius:6px;
+cursor:pointer;
+}
+
+.result{
+margin-top:15px;
+font-weight:500;
 }
 
 
@@ -322,17 +388,6 @@ CONTACT
 background:#f1f5f9;
 padding:100px 20px;
 text-align:center;
-border-top:1px solid #e2e8f0;
-}
-
-.contact-section h2{
-font-size:32px;
-margin-bottom:20px;
-}
-
-.contact-section p{
-font-size:16px;
-color:#334155;
 }
 
 </style>
@@ -340,6 +395,21 @@ color:#334155;
 </head>
 
 <body>
+
+
+<!-- NAVBAR -->
+
+<div class="navbar">
+
+<b>Erilla Windayani</b>
+
+<div class="nav-links">
+<a href="#">Home</a>
+<a href="#portfolio">Portfolio</a>
+<a href="#contact">Contact</a>
+</div>
+
+</div>
 
 
 <!-- HERO -->
@@ -356,23 +426,13 @@ Automation & Workflow Specialist
 </p>
 
 <p class="hero-desc">
-I build automation tools using Google Apps Script and Google Sheets to streamline workflows and automate business processes.
+I build automation tools using Google Apps Script and Google Sheets to streamline workflows and generate documents automatically.
 </p>
 
-<div class="hero-buttons">
-
-<a href="#portfolio" class="btn btn-primary">
-View Portfolio
-</a>
-
-<a href="#contact" class="btn btn-outline">
-Contact Me
-</a>
-
-</div>
+<a href="#portfolio" class="btn btn-primary">View Portfolio</a>
+<a href="#contact" class="btn btn-outline">Contact Me</a>
 
 </section>
-
 
 
 <!-- PORTFOLIO -->
@@ -381,9 +441,16 @@ Contact Me
 
 <h2>Portfolio</h2>
 
+<div class="project-nav">
+
+<button onclick="prevProject()">❮</button>
+<button onclick="nextProject()">❯</button>
+
+</div>
+
 <div class="projects">
 
-<div class="project-card">
+<div class="project-card active">
 
 <h3>Client Workflow Automation Dashboard</h3>
 
@@ -397,9 +464,7 @@ Automation dashboard built with Google Apps Script to manage client workflow and
 <li>Workflow Automation</li>
 </ul>
 
-<button class="project-btn" onclick="toggleProject()">
-View Project
-</button>
+<button class="btn btn-primary" onclick="toggleDemo(1)">View Demo</button>
 
 </div>
 
@@ -409,7 +474,7 @@ View Project
 <h3>Survey Proposal Generator</h3>
 
 <p>
-Automation system that converts survey data into automatically generated proposal documents.
+Automation system that converts survey data into automatically generated proposal documents using Google Apps Script and Slides templates.
 </p>
 
 <ul>
@@ -418,9 +483,7 @@ Automation system that converts survey data into automatically generated proposa
 <li>Document Automation</li>
 </ul>
 
-<button class="project-btn" onclick="toggleProposal()">
-View Project
-</button>
+<button class="btn btn-primary" onclick="toggleDemo(2)">View Demo</button>
 
 </div>
 
@@ -429,10 +492,9 @@ View Project
 </section>
 
 
-
 <!-- DEMO 1 -->
 
-<section id="demo1" class="project-demo" style="display:none;">
+<section id="demo1" class="project-demo">
 
 <h2>MauCariKost Automation System</h2>
 
@@ -442,18 +504,18 @@ src="https://lh3.googleusercontent.com/d/1uBUH1fq9QixviqudePO_DCX9-4EqHQVa">
 <div class="metrics">
 
 <div class="metric-card">
-<b class="counter">6</b>
+<b>6</b>
 Automation Scripts
 </div>
 
 <div class="metric-card">
-<b class="counter">100</b>+
-Client Records
+<b>100+</b>
+Clients
 </div>
 
 <div class="metric-card">
-<b class="counter">5</b>
-Client Workflows
+<b>5</b>
+Workflows
 </div>
 
 <div class="metric-card">
@@ -464,89 +526,84 @@ Manual Work Reduced
 </div>
 
 
-<div class="section-divider">
-How It Works
+<div class="section-divider">Key Features</div>
+
+<div class="feature-card">
+
+✔ Automatic client grouping<br>
+✔ One-click database sync<br>
+✔ Monthly client tracking<br>
+✔ Custom admin dashboard
+
 </div>
 
-<div class="workflow">
 
-<div class="workflow-step" onclick="alert('Client submits form')">
-<img src="https://cdn-icons-png.flaticon.com/512/2921/2921222.png">
-<p>Client submits form</p>
+<div class="section-divider">Tech Stack</div>
+
+<div class="tech-stack">
+
+<div class="tech-box">
+Google Sheets
 </div>
 
-<div class="workflow-arrow">→</div>
-
-<div class="workflow-step" onclick="alert('Data stored in Google Sheets')">
-<img src="https://cdn-icons-png.flaticon.com/512/281/281760.png">
-<p>Google Sheets</p>
+<div class="tech-box">
+Apps Script
 </div>
 
-<div class="workflow-arrow">→</div>
-
-<div class="workflow-step" onclick="alert('Apps Script automation runs')">
-<img src="https://cdn-icons-png.flaticon.com/512/2092/2092663.png">
-<p>Apps Script</p>
-</div>
-
-<div class="workflow-arrow">→</div>
-
-<div class="workflow-step" onclick="alert('Clients grouped & tracked')">
-<img src="https://cdn-icons-png.flaticon.com/512/1077/1077012.png">
-<p>Tracking</p>
+<div class="tech-box">
+Google Forms
 </div>
 
 </div>
 
 </section>
-
 
 
 <!-- DEMO 2 -->
 
-<section id="demo2" class="project-demo" style="display:none;">
+<section id="demo2" class="project-demo">
 
 <h2>Survey Proposal Generator</h2>
 
-<img class="demo-image"
-src="https://lh3.googleusercontent.com/d/1l2yvZCQU0CPMF4M_2Z6u4qjROyUQfOso">
+<div class="generator">
 
-<div class="section-divider">
-How It Works
+<input id="clientName" placeholder="Client Name">
+
+<button onclick="generateProposal()">Generate Proposal</button>
+
+<div class="result" id="result"></div>
+
 </div>
 
-<div class="workflow">
+<div class="section-divider">Key Features</div>
 
-<div class="workflow-step">
-<img src="https://cdn-icons-png.flaticon.com/512/2921/2921222.png">
-<p>Survey Data</p>
+<div class="feature-card">
+
+✔ Auto generate proposal from survey data<br>
+✔ Dynamic Slides template replacement<br>
+✔ One-click proposal generation
+
 </div>
 
-<div class="workflow-arrow">→</div>
+<div class="section-divider">Tech Stack</div>
 
-<div class="workflow-step">
-<img src="https://cdn-icons-png.flaticon.com/512/281/281760.png">
-<p>Sheets</p>
+<div class="tech-stack">
+
+<div class="tech-box">
+Google Sheets
 </div>
 
-<div class="workflow-arrow">→</div>
-
-<div class="workflow-step">
-<img src="https://cdn-icons-png.flaticon.com/512/2092/2092663.png">
-<p>Apps Script</p>
+<div class="tech-box">
+Apps Script
 </div>
 
-<div class="workflow-arrow">→</div>
-
-<div class="workflow-step">
-<img src="https://cdn-icons-png.flaticon.com/512/337/337946.png">
-<p>Slides Proposal</p>
+<div class="tech-box">
+Google Slides
 </div>
 
 </div>
 
 </section>
-
 
 
 <!-- CONTACT -->
@@ -558,63 +615,61 @@ How It Works
 <p>Email: erillawinda@gmail.com</p>
 
 <p>
-<a href="https://www.linkedin.com" target="_blank">LinkedIn</a> |
-<a href="https://github.com/erillawinda-cloud" target="_blank">GitHub</a>
+<a href="https://github.com/erillawinda-cloud">GitHub</a>
 </p>
 
 </section>
 
 
-
 <script>
 
-/* toggle */
+let currentProject=0
+const projects=document.querySelectorAll(".project-card")
 
-function toggleProject(){
-
-const demo=document.getElementById("demo1");
-
-demo.style.display = demo.style.display==="none" ? "block" : "none";
-
-if(demo.style.display==="block"){
-demo.scrollIntoView({behavior:"smooth"});
+function showProject(index){
+projects.forEach(p=>p.classList.remove("active"))
+projects[index].classList.add("active")
 }
 
+function nextProject(){
+currentProject++
+if(currentProject>=projects.length){currentProject=0}
+showProject(currentProject)
 }
 
-function toggleProposal(){
-
-const demo=document.getElementById("demo2");
-
-demo.style.display = demo.style.display==="none" ? "block" : "none";
-
-if(demo.style.display==="block"){
-demo.scrollIntoView({behavior:"smooth"});
+function prevProject(){
+currentProject--
+if(currentProject<0){currentProject=projects.length-1}
+showProject(currentProject)
 }
 
+function toggleDemo(id){
+
+document.querySelectorAll(".project-demo")
+.forEach(d=>d.classList.remove("active"))
+
+document.getElementById("demo"+id)
+.classList.add("active")
+
+document.getElementById("demo"+id)
+.scrollIntoView({behavior:"smooth"})
+
 }
 
+function generateProposal(){
 
-/* metric counter */
+let name=document.getElementById("clientName").value
 
-document.querySelectorAll(".counter").forEach(counter=>{
-let target=+counter.innerText;
-let count=0;
-
-let interval=setInterval(()=>{
-
-count+=Math.ceil(target/40);
-
-if(count>=target){
-count=target;
-clearInterval(interval);
+if(name===""){
+document.getElementById("result")
+.innerHTML="Please enter client name"
+return
 }
 
-counter.innerText=count;
+document.getElementById("result")
+.innerHTML="Proposal for <b>"+name+"</b> generated successfully"
 
-},30);
-
-});
+}
 
 </script>
 
