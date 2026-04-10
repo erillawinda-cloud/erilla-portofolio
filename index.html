@@ -201,36 +201,84 @@ width:100%;
 
 border-radius:10px;
 
-margin-bottom:30px;
+margin-bottom:40px;
 }
 
-.demo-text{
 
-max-width:700px;
+/* METRICS */
 
-margin:auto;
+.metrics{
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+margin-bottom:50px;
+}
 
-line-height:1.7;
+.metric-card{
+background:white;
+padding:20px;
+border-radius:10px;
+border:1px solid #e2e8f0;
+width:160px;
+font-weight:600;
+}
 
-color:#334155;
+.metric-card b{
+font-size:26px;
+display:block;
+margin-bottom:5px;
+}
 
+
+/* WORKFLOW */
+
+.workflow{
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+margin:30px 0 50px 0;
+}
+
+.workflow-box{
+background:white;
+padding:20px;
+border-radius:10px;
+border:1px solid #e2e8f0;
+width:200px;
+}
+
+
+/* FEATURE CARD */
+
+.feature-card{
+background:white;
+padding:25px;
+border-radius:12px;
+border:1px solid #e2e8f0;
+max-width:400px;
+margin:30px auto 50px auto;
 text-align:left;
+line-height:1.8;
 }
 
-.demo-text h3{
 
-margin-top:25px;
+/* TECH STACK */
 
-margin-bottom:10px;
-
+.tech-stack{
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
 }
 
-.demo-text ul{
-
-padding-left:18px;
-
-margin-top:10px;
-
+.tech-box{
+background:white;
+padding:20px;
+border-radius:10px;
+border:1px solid #e2e8f0;
+width:160px;
 }
 
 
@@ -354,45 +402,81 @@ class="demo-image"
 src="PASTE_SCREENSHOT_LINK_HERE"
 />
 
-<div class="demo-text">
 
-<h3>The Problem</h3>
+<div class="metrics">
 
-<p>
-Managing housing request data manually can be time-consuming. 
-Admins often need to organize client requests, assign them to different admins, 
-and track progress across multiple spreadsheets.
-</p>
+<div class="metric-card">
+<b>5</b>
+Automation Scripts
+</div>
 
-<h3>The Solution</h3>
+<div class="metric-card">
+<b>100+</b>
+Client Records
+</div>
 
-<p>
-This system introduces a custom automation dashboard built using Google Apps Script. 
-Admins can process client data, group requests automatically, synchronize the database, 
-and monitor activities more efficiently.
-</p>
+<div class="metric-card">
+<b>4</b>
+Admin Workflows
+</div>
+
+<div class="metric-card">
+<b style="color:green;">80%</b>
+Manual Work Reduced
+</div>
+
+</div>
+
+
 
 <h3>How It Works</h3>
 
-<p>
-Client submits form → Data stored in Google Sheets → Admin runs automation dashboard → Clients grouped and tracked automatically.
-</p>
+<div class="workflow">
+
+<div class="workflow-box">
+Client submits form
+</div>
+
+<div class="workflow-box">
+Data stored in Google Sheets
+</div>
+
+<div class="workflow-box">
+Admin runs automation
+</div>
+
+<div class="workflow-box">
+Clients grouped & tracked
+</div>
+
+</div>
+
+
 
 <h3>Key Features</h3>
 
-<ul>
-<li>Client request database</li>
-<li>Automatic client grouping</li>
-<li>One-click database sync</li>
-<li>Monthly client tracking</li>
-<li>Custom admin dashboard</li>
-</ul>
+<div class="feature-card">
+
+✔ Automatic client grouping<br>
+✔ One-click database sync<br>
+✔ Monthly client tracking<br>
+✔ Custom admin dashboard
+
+</div>
+
+
 
 <h3>Tech Stack</h3>
 
-<p>
-Google Sheets • Google Apps Script • Google Forms • Workflow Automation
-</p>
+<div class="tech-stack">
+
+<div class="tech-box">Google Sheets</div>
+
+<div class="tech-box">Apps Script</div>
+
+<div class="tech-box">Google Forms</div>
+
+<div class="tech-box">Workflow Automation</div>
 
 </div>
 
