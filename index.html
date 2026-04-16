@@ -674,6 +674,27 @@ demo.scrollIntoView({behavior:"smooth"});
 
 }
 
+let currentProject = 0;
+const projects = document.querySelectorAll(".project-card");
+
+function showProject(index){
+projects.forEach(p => p.classList.remove("active"));
+projects[index].classList.add("active");
+}
+
+function nextProject(){
+currentProject++;
+if(currentProject >= projects.length){currentProject = 0;}
+showProject(currentProject);
+hideAllDemos();
+}
+
+function prevProject(){
+currentProject--;
+if(currentProject < 0){currentProject = projects.length - 1;}
+showProject(currentProject);
+hideAllDemos();
+}
 </script>
 
 </body>
