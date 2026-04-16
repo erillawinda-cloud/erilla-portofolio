@@ -663,27 +663,17 @@ document.getElementById("demo2").style.display="none";
 
 }
 
-function toggleProject(){
+function toggleDemo(id){
 
 hideAllDemos();
 
-const demo=document.getElementById("demo1");
+const demo=document.getElementById("demo"+id);
 demo.style.display="block";
 
 demo.scrollIntoView({behavior:"smooth"});
 
 }
 
-function toggleProposal(){
-
-hideAllDemos();
-
-const demo=document.getElementById("demo2");
-demo.style.display="block";
-
-demo.scrollIntoView({behavior:"smooth"});
-
-}
 </script>
 
 </body>
