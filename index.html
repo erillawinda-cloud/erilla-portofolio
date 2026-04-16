@@ -585,6 +585,51 @@ Workflow Automation
 
 </section>
 
+<!-- DEMO 2 -->
+
+<section id="demo2" class="project-demo" style="display:none;">
+
+<h2>Survey Proposal Generator</h2>
+
+<img class="demo-image"
+src="https://lh3.googleusercontent.com/d/1l2yvZCQU0CPMF4M_2Z6u4qjROyUQfOso">
+
+<div class="section-divider">
+How It Works
+</div>
+
+<div class="workflow">
+
+<div class="workflow-step">
+<img src="https://cdn-icons-png.flaticon.com/512/2921/2921222.png">
+<p>Survey Data</p>
+</div>
+
+<div class="workflow-arrow">→</div>
+
+<div class="workflow-step">
+<img src="https://cdn-icons-png.flaticon.com/512/281/281760.png">
+<p>Sheets</p>
+</div>
+
+<div class="workflow-arrow">→</div>
+
+<div class="workflow-step">
+<img src="https://cdn-icons-png.flaticon.com/512/2092/2092663.png">
+<p>Apps Script</p>
+</div>
+
+<div class="workflow-arrow">→</div>
+
+<div class="workflow-step">
+<img src="https://cdn-icons-png.flaticon.com/512/337/337946.png">
+<p>Slides Proposal</p>
+</div>
+
+</div>
+
+</section>
+
 
 <!-- CONTACT -->
 
@@ -611,48 +656,34 @@ erillawinda@gmail.com
 
 <script>
 
-let currentProject=0
-const projects=document.querySelectorAll(".project-card")
-
-function showProject(index){
-projects.forEach(p=>p.classList.remove("active"))
-projects[index].classList.add("active")
-}
-
 function hideAllDemos(){
-document.querySelectorAll(".project-demo")
-.forEach(d => d.classList.remove("active"))
-}
 
-function nextProject(){
-currentProject++
-if(currentProject>=projects.length){currentProject=0}
-
-showProject(currentProject)
-hideAllDemos()
-}
-
-function prevProject(){
-currentProject--
-if(currentProject<0){currentProject=projects.length-1}
-
-showProject(currentProject)
-hideAllDemos()
-}
-
-function toggleDemo(id){
-
-document.querySelectorAll(".project-demo")
-.forEach(d=>d.classList.remove("active"))
-
-document.getElementById("demo"+id)
-.classList.add("active")
-
-document.getElementById("demo"+id)
-.scrollIntoView({behavior:"smooth"})
+document.getElementById("demo1").style.display="none";
+document.getElementById("demo2").style.display="none";
 
 }
 
+function toggleProject(){
+
+hideAllDemos();
+
+const demo=document.getElementById("demo1");
+demo.style.display="block";
+
+demo.scrollIntoView({behavior:"smooth"});
+
+}
+
+function toggleProposal(){
+
+hideAllDemos();
+
+const demo=document.getElementById("demo2");
+demo.style.display="block";
+
+demo.scrollIntoView({behavior:"smooth"});
+
+}
 </script>
 
 </body>
