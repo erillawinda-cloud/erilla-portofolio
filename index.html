@@ -94,6 +94,40 @@ line-height:1.7;
 margin-bottom:40px;
 }
 
+.hero-metrics{
+display:flex;
+justify-content:center;
+gap:25px;
+flex-wrap:wrap;
+margin-bottom:40px;
+}
+
+.hero-metric{
+background:rgba(255,255,255,0.08);
+border:1px solid rgba(255,255,255,0.15);
+padding:20px 30px;
+border-radius:12px;
+text-align:center;
+backdrop-filter:blur(6px);
+transition:0.3s;
+}
+
+.hero-metric:hover{
+transform:translateY(-4px);
+background:rgba(255,255,255,0.12);
+}
+
+.hero-metric b{
+font-size:28px;
+display:block;
+margin-bottom:5px;
+}
+
+.hero-metric span{
+font-size:14px;
+opacity:.9;
+}
+
 
 /* BUTTON */
 
@@ -389,6 +423,25 @@ Automation & Workflow Specialist
 <p class="hero-desc">
 I build automation tools using Google Apps Script and Google Sheets to streamline workflows and generate documents automatically.
 </p>
+
+<div class="hero-metrics">
+
+<div class="hero-metric">
+<b>2+</b>
+<span>Automation Projects</span>
+</div>
+
+<div class="hero-metric">
+<b>150+</b>
+<span>Records Processed</span>
+</div>
+
+<div class="hero-metric">
+<b>75%</b>
+<span>Workflow Efficiency</span>
+</div>
+
+</div>
 
 <a href="#portfolio" class="btn btn-primary">View Portfolio</a>
 <a href="#contact" class="btn btn-outline">Contact Me</a>
